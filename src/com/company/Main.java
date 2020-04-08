@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.behavioral.chainofresponsability.Tarjeta;
+import com.company.behavioral.command.CreditCard;
+import com.company.behavioral.command.CreditCardActivateCommand;
+import com.company.behavioral.command.CreditCardDeactivateCommand;
+import com.company.behavioral.command.CreditCardInvoker;
 import com.company.creational.abstractfactory.AbstractFactory;
 import com.company.creational.abstractfactory.Card;
 import com.company.creational.abstractfactory.FactoryProvider;
@@ -17,11 +22,40 @@ import static com.company.creational.prototype.PrototypeFactory.CarType.VISA;
 public class Main {
 
     public static void main(String[] args) {
+
+        //CREACIONALES
         //probarFactoryMethod();
         //probarAbstractFactoryMethod();
         //probarBuilder();
         //probarPrototype();
-        probarSinglenton();
+        //probarSinglenton();
+
+        //COMPORTAMIENTOÇ
+        //probarChainOfResponsability();
+        probarCommand();
+    }
+
+    private static void probarCommand() {
+
+        CreditCard creditCard = new CreditCard();
+        CreditCard creditCardDeactivate = new CreditCard();
+
+        CreditCardInvoker invoker = new CreditCardInvoker();
+
+        System.out.println("---------------------------------------------------------------------");
+        invoker.setCommand(new CreditCardActivateCommand(creditCard));
+        invoker.run();
+        System.out.println("---------------------------------------------------------------------");
+        invoker.setCommand((new CreditCardDeactivateCommand(creditCardDeactivate)));
+        invoker.run();
+        System.out.println("---------------------------------------------------------------------");
+
+    }
+
+    private static void probarChainOfResponsability() {
+
+        Tarjeta tarjeta = new Tarjeta();  //en este punto en lugar de esta instruccion, se puede usar un patrón creacional como probarFactoryMethod
+        tarjeta.creditCardRequest(15);
     }
 
     private static void probarSinglenton() {
@@ -34,19 +68,19 @@ public class Main {
     private static void probarPrototype() {
 
         PrototypeFactory.loadCard();
-        try{
+        try {
             PrototypeCard visa = PrototypeFactory.getInstance(VISA);
             visa.getCard();
 
             PrototypeCard amex = PrototypeFactory.getInstance(AMEX);
             amex.getCard();
 
-        }catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
     }
 
-    private static void probarBuilder(){
+    private static void probarBuilder() {
 
         com.company.creational.builder.Card card = new com.company.creational.builder.Card.CardBuilder("VISA",
                 "0000 1111 2222 3333")
