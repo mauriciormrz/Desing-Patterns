@@ -7,6 +7,11 @@ import com.company.creational.abstractfactory.PaymentMethod;
 import com.company.creational.factorymethod.Payment;
 import com.company.creational.factorymethod.PaymentFactory;
 import com.company.creational.factorymethod.TypePayment;
+import com.company.creational.prototype.PrototypeCard;
+import com.company.creational.prototype.PrototypeFactory;
+
+import static com.company.creational.prototype.PrototypeFactory.CarType.AMEX;
+import static com.company.creational.prototype.PrototypeFactory.CarType.VISA;
 
 
 public class Main {
@@ -14,7 +19,31 @@ public class Main {
     public static void main(String[] args) {
         //probarFactoryMethod();
         //probarAbstractFactoryMethod();
-        probarBuilder();
+        //probarBuilder();
+        //probarPrototype();
+        probarSinglenton();
+    }
+
+    private static void probarSinglenton() {
+
+        //com.company.creational.singlenton.Card card = new com.company.creational.singlenton.Card();
+        com.company.creational.singlenton.Card.getINSTANCE().setCardNumber("1234-1234-1234-1234");
+        System.out.println(com.company.creational.singlenton.Card.getINSTANCE().getCardNumber());
+    }
+
+    private static void probarPrototype() {
+
+        PrototypeFactory.loadCard();
+        try{
+            PrototypeCard visa = PrototypeFactory.getInstance(VISA);
+            visa.getCard();
+
+            PrototypeCard amex = PrototypeFactory.getInstance(AMEX);
+            amex.getCard();
+
+        }catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
     }
 
     private static void probarBuilder(){
