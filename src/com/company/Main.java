@@ -5,6 +5,15 @@ import com.company.behavioral.command.CreditCard;
 import com.company.behavioral.command.CreditCardActivateCommand;
 import com.company.behavioral.command.CreditCardDeactivateCommand;
 import com.company.behavioral.command.CreditCardInvoker;
+import com.company.behavioral.iterator.CardList;
+import com.company.behavioral.iterator.Iterator;
+import com.company.behavioral.iterator.List;
+import com.company.behavioral.mediator.ConcreteColleague1;
+import com.company.behavioral.mediator.ConcreteColleague2;
+import com.company.behavioral.mediator.ConcreteMediator;
+import com.company.behavioral.memento.Article;
+import com.company.behavioral.memento.ArticleMemento;
+import com.company.behavioral.memento.Caretaker;
 import com.company.creational.abstractfactory.AbstractFactory;
 import com.company.creational.abstractfactory.Card;
 import com.company.creational.abstractfactory.FactoryProvider;
@@ -32,7 +41,71 @@ public class Main {
 
         //COMPORTAMIENTOÇ
         //probarChainOfResponsability();
-        probarCommand();
+        //probarCommand();
+        //probarIterator();
+        //probarMediator();
+        probarMemento();
+    }
+
+    private static void probarMemento() {
+
+        Caretaker caretaker = new Caretaker();
+        Article article = new Article("Mauricio", "Memento es una película");
+        article.setText(article.getText() + " de Nolan");
+        System.out.println(article.getText());
+
+        caretaker.addMemento(article.createMemento());
+        article.setText(article.getText() + " protagonizada por Guy Pearce");
+        System.out.println(article.getText());
+
+        caretaker.addMemento(article.createMemento());
+        article.setText(article.getText() + " y Leonardo DiCaprio");
+        System.out.println(article.getText());
+
+        ArticleMemento memento1 = caretaker.getMemento(0);
+        ArticleMemento memento2 = caretaker.getMemento(1);
+
+        article.restoreMemento(memento1);
+        System.out.println(article.getText());
+
+        article.restoreMemento(memento2);
+        System.out.println(article.getText());
+
+
+
+    }
+
+    private static void probarMediator() {
+
+        ConcreteMediator mediator = new ConcreteMediator();
+        ConcreteColleague1 user1 = new ConcreteColleague1(mediator);
+        ConcreteColleague2 user2 = new ConcreteColleague2(mediator);
+
+        mediator.setUser1(user1);
+        mediator.setUser2(user2);
+
+        user1.send("Hola soy user1");
+        user2.send("Hola user1, soy user2");
+    }
+
+    private static void probarIterator() {
+
+        com.company.behavioral.iterator.Card[] cards =  new com.company.behavioral.iterator.Card[5];
+        cards[0] = new com.company.behavioral.iterator.Card("VISA");
+        cards[1] = new com.company.behavioral.iterator.Card("AMEX");
+        cards[2] = new com.company.behavioral.iterator.Card("MASTER CARD");
+        cards[3] = new com.company.behavioral.iterator.Card("GOOGLE CARD");
+        cards[4] = new com.company.behavioral.iterator.Card("APPLE CARD");
+
+        List lista = new CardList(cards);
+        Iterator iterator = lista.iterator();
+
+        while (iterator.hasNext()){
+
+            com.company.behavioral.iterator.Card tarjeta = (com.company.behavioral.iterator.Card) iterator.next();
+            System.out.println(tarjeta.getType());
+        }
+
     }
 
     private static void probarCommand() {
