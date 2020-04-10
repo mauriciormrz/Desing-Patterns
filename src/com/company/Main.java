@@ -5,6 +5,10 @@ import com.company.behavioral.command.CreditCard;
 import com.company.behavioral.command.CreditCardActivateCommand;
 import com.company.behavioral.command.CreditCardDeactivateCommand;
 import com.company.behavioral.command.CreditCardInvoker;
+import com.company.behavioral.interpreter.Expression;
+import com.company.behavioral.interpreter.TerminalExpresion;
+import com.company.behavioral.interpreter.andExpression;
+import com.company.behavioral.interpreter.orExpression;
 import com.company.behavioral.iterator.CardList;
 import com.company.behavioral.iterator.Iterator;
 import com.company.behavioral.iterator.List;
@@ -21,6 +25,9 @@ import com.company.behavioral.observer.Semaforo;
 import com.company.behavioral.state.MobileAlertStateContext;
 import com.company.behavioral.state.Silent;
 import com.company.behavioral.state.Vibration;
+import com.company.behavioral.strategy.CapitalStrategyTextFormatter;
+import com.company.behavioral.strategy.Context;
+import com.company.behavioral.strategy.LowerStrategyTextFormatter;
 import com.company.creational.abstractfactory.AbstractFactory;
 import com.company.creational.abstractfactory.Card;
 import com.company.creational.abstractfactory.FactoryProvider;
@@ -53,7 +60,33 @@ public class Main {
         //probarMediator();
         //probarMemento();
         //probarObserver();
-        probarState();
+        //probarState();
+        //probarInterprter();
+        probarStrategy();
+    }
+
+    private static void probarStrategy() {
+
+        Context context = new Context(new CapitalStrategyTextFormatter());
+        context.publishText("Este texto será convertido todo a MAYÚSCULAS a través del algoritmo");
+
+        context = new Context(new LowerStrategyTextFormatter());
+        context.publishText("Este texto SERA CONVERTIDO todo a MINUSCULAS a través del algoritmo");
+    }
+
+    private static void probarInterprter() {
+
+        Expression cero = new TerminalExpresion("0");
+        Expression uno = new TerminalExpresion("1");
+
+        Expression  containBoolean = new orExpression(cero, uno);
+        Expression  containOneAndCero = new andExpression(cero, uno);
+
+        System.out.println(containBoolean.interpret("cero"));
+        System.out.println(containBoolean.interpret("0"));
+
+        System.out.println(containOneAndCero.interpret("0"));
+        System.out.println(containOneAndCero.interpret("0,1"));
     }
 
     private static void probarState() {

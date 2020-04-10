@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6e0c2a-0018-4ae0-854c-658a0214428f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/observer/Coche.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/observer/MessagePublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/observer/Peaton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/observer/Semaforo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/observer/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/status/MobileAlertState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/status/MobileAlertStateContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/status/Silent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/status/Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/status/Vibration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/TerminalExpresion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/andExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/orExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/CapitalStrategyTextFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/LowerStrategyTextFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/StrategyTextFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,10 +100,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1586535965398">
+    <state x="533" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1586552488179">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1586535965398" />
+    <state x="533" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1586552488179" />
     <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1586527605968" />
     <state x="482" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586440792801">
       <screen x="0" y="23" width="1440" height="808" />
@@ -116,26 +113,26 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="592" height="466" key="DebuggerActiveHint/0.23.1440.808@0.23.1440.808" timestamp="1586304400963" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom" timestamp="1586536237736">
+    <state width="1398" height="208" key="GridCell.Tab.0.bottom" timestamp="1586552848648">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586536237736" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586531554197" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center" timestamp="1586536237734">
+    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586552848648" />
+    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586552745944" />
+    <state width="1398" height="208" key="GridCell.Tab.0.center" timestamp="1586552848646">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586536237734" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1586531554197" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left" timestamp="1586536237733">
+    <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586552848646" />
+    <state width="1398" height="208" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1586552745941" />
+    <state width="1398" height="208" key="GridCell.Tab.0.left" timestamp="1586552848645">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586536237733" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1586531554196" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right" timestamp="1586536237735">
+    <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586552848645" />
+    <state width="1398" height="208" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1586552745939" />
+    <state width="1398" height="208" key="GridCell.Tab.0.right" timestamp="1586552848647">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586536237735" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1586531554197" />
+    <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586552848647" />
+    <state width="1398" height="208" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1586552745942" />
     <state width="1398" height="258" key="GridCell.Tab.1.bottom" timestamp="1586376768365">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
