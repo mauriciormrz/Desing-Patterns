@@ -14,6 +14,13 @@ import com.company.behavioral.mediator.ConcreteMediator;
 import com.company.behavioral.memento.Article;
 import com.company.behavioral.memento.ArticleMemento;
 import com.company.behavioral.memento.Caretaker;
+import com.company.behavioral.observer.Coche;
+import com.company.behavioral.observer.MessagePublisher;
+import com.company.behavioral.observer.Peaton;
+import com.company.behavioral.observer.Semaforo;
+import com.company.behavioral.state.MobileAlertStateContext;
+import com.company.behavioral.state.Silent;
+import com.company.behavioral.state.Vibration;
 import com.company.creational.abstractfactory.AbstractFactory;
 import com.company.creational.abstractfactory.Card;
 import com.company.creational.abstractfactory.FactoryProvider;
@@ -44,9 +51,45 @@ public class Main {
         //probarCommand();
         //probarIterator();
         //probarMediator();
-        probarMemento();
+        //probarMemento();
+        //probarObserver();
+        probarState();
     }
 
+    private static void probarState() {
+
+        MobileAlertStateContext context = new MobileAlertStateContext();
+        context.alert();
+        context.alert();
+
+        context.setState(new Vibration());
+        context.alert();
+        context.alert();
+
+        context.setState(new Silent());
+        context.alert();
+        context.alert();
+
+    }
+
+    private static void probarObserver() {
+
+        Coche coche = new Coche();
+        Peaton peaton = new Peaton();
+        MessagePublisher messagePublisher = new MessagePublisher();
+
+        messagePublisher.attach(coche);
+        messagePublisher.attach(peaton);
+        messagePublisher.notifyUpdate(new Semaforo("ROJO_COCHE"));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        messagePublisher.notifyUpdate(new Semaforo("VERDE_COCHE"));
+
+    }
     private static void probarMemento() {
 
         Caretaker caretaker = new Caretaker();
