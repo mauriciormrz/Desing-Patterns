@@ -4,7 +4,6 @@ public class Context { //Context
 
     private StrategyTextFormatter strategyTextFormatter;
 
-
     public Context(StrategyTextFormatter strategyTextFormatter) {
 
         this.strategyTextFormatter = strategyTextFormatter;

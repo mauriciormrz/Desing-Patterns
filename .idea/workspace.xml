@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6e0c2a-0018-4ae0-854c-658a0214428f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/Expression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/TerminalExpresion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/andExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/interpreter/orExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/CapitalStrategyTextFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/LowerStrategyTextFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/StrategyTextFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/templatemethod/PayPal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/templatemethod/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/templatemethod/Visa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/visitor/BlackCreditCardVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/visitor/ClassicCreditCardVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/visitor/CreditCardVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/visitor/OfertaElemento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/visitor/OfertaGasolina.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/behavioral/visitor/OfertaVuelos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatronJava/META-INF/PatronJava.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatronJava/com/company/behavioral/strategy/Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatronJava/com/company/behavioral/strategy/Context.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/behavioral/strategy/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/behavioral/strategy/Context.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +54,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.behavioral.visitor" />
       <recent name="com.company.behavioral.observer" />
       <recent name="com.company.creational.abstractfactory" />
     </key>
@@ -100,11 +105,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1586552488179">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1586622198166">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="533" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1586552488179" />
-    <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1586527605968" />
+    <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1586622198166" />
     <state x="482" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586440792801">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
@@ -113,26 +118,26 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="592" height="466" key="DebuggerActiveHint/0.23.1440.808@0.23.1440.808" timestamp="1586304400963" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom" timestamp="1586552848648">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="175" key="GridCell.Tab.0.bottom" timestamp="1586622534452">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586552848648" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586552745944" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center" timestamp="1586552848646">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="175" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586622534452" />
+    <state width="1398" height="175" key="GridCell.Tab.0.center" timestamp="1586622534450">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586552848646" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1586552745941" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left" timestamp="1586552848645">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="175" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1586622534450" />
+    <state width="1398" height="175" key="GridCell.Tab.0.left" timestamp="1586622534450">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586552848645" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1586552745939" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right" timestamp="1586552848647">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="175" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1586622534450" />
+    <state width="1398" height="175" key="GridCell.Tab.0.right" timestamp="1586622534451">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586552848647" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1586552745942" />
+    <state width="1398" height="175" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1586622534451" />
     <state width="1398" height="258" key="GridCell.Tab.1.bottom" timestamp="1586376768365">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
