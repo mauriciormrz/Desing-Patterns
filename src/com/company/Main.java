@@ -40,6 +40,9 @@ import com.company.creational.factorymethod.PaymentFactory;
 import com.company.creational.factorymethod.TypePayment;
 import com.company.creational.prototype.PrototypeCard;
 import com.company.creational.prototype.PrototypeFactory;
+import com.company.structural.bridge.ClassicCreditCard;
+import com.company.structural.bridge.SecureCreditCard;
+import com.company.structural.bridge.UnsecureCreditCard;
 
 import static com.company.creational.prototype.PrototypeFactory.CarType.AMEX;
 import static com.company.creational.prototype.PrototypeFactory.CarType.VISA;
@@ -56,18 +59,40 @@ public class Main {
         //probarPrototype();
         //probarSinglenton();
 
-        //COMPORTAMIENTOÇ
-        //probarChainOfResponsability();
+        //COMPORTAMIENTO
+        //probarChainOfResponsibility();
         //probarCommand();
         //probarIterator();
         //probarMediator();
         //probarMemento();
         //probarObserver();
         //probarState();
-        //probarInterprter();
+        //probarInterpreter();
         //probarStrategy();
         //probarTemplateMethod();
-        probarVisitor();
+        //probarVisitor();
+
+        //STRUCTURAL
+        //probarAdapter();
+        probarBridge();
+    }
+
+    private static void probarBridge(){
+
+        com.company.structural.bridge.CreditCard classic = new ClassicCreditCard(new UnsecureCreditCard());
+        classic.realizarPago();
+
+        classic = new ClassicCreditCard(new SecureCreditCard());
+        classic.realizarPago();
+    }
+
+    private static void probarAdapter(){
+
+        com.company.structural.adapter.CreditCard creditCard = new com.company.structural.adapter.CreditCard();
+        creditCard.pay("classic");
+        creditCard.pay("gold");
+        creditCard.pay("black");
+        creditCard.pay("silver");
     }
 
     private static void probarVisitor(){
@@ -98,7 +123,7 @@ public class Main {
         context.publishText("Este texto SERA CONVERTIDO todo a MINUSCULAS a través del algoritmo");
     }
 
-    private static void probarInterprter() {
+    private static void probarInterpreter() {
 
         Expression cero = new TerminalExpresion("0");
         Expression uno = new TerminalExpresion("1");
@@ -225,7 +250,7 @@ public class Main {
 
     }
 
-    private static void probarChainOfResponsability() {
+    private static void probarChainOfResponsibility() {
 
         Tarjeta tarjeta = new Tarjeta();  //en este punto en lugar de esta instruccion, se puede usar un patrón creacional como probarFactoryMethod
         tarjeta.creditCardRequest(15);
