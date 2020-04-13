@@ -48,12 +48,22 @@ import com.company.structural.composite.CuentaComponent;
 import com.company.structural.composite.CuentaComposite;
 import com.company.structural.composite.CuentaCorriente;
 import com.company.structural.decorator.*;
+import com.company.structural.facade.CreditMarket;
+import com.company.structural.flyweight.Enemy;
+import com.company.structural.flyweight.EnemyFactory;
+import com.company.structural.proxy.Internet;
+import com.company.structural.proxy.ProxyInternet;
+
+import java.util.Random;
 
 import static com.company.creational.prototype.PrototypeFactory.CarType.AMEX;
 import static com.company.creational.prototype.PrototypeFactory.CarType.VISA;
 
 
 public class Main {
+
+    private static String[] enemyType = {"Private", "Detective"};
+    private static String[] weapon = {"Fusil", "Revolver", "Pistola", "Metralleta", "Lanza-Granadas", "9mm"};
 
     public static void main(String[] args) {
 
@@ -81,11 +91,56 @@ public class Main {
         //probarAdapter();
         //probarBridge();
         //probarComposite();
-        probarDecorator();
-
+        //probarDecorator();
+        //probarFacade();
+        //probarFlyweight();
+        probarProxy();
     }
 
-    private static void probarDecorator(){
+    private static void probarProxy() {
+
+        Internet internet = new ProxyInternet();
+        try {
+            internet.connectTo("udemy.com");
+            internet.connectTo("facebook.com");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void probarFlyweight() {
+
+        for (int i = 0; i < 15; i++) {
+            Enemy enemy = EnemyFactory.getEnemy(getRandomEnemyType());
+            enemy.setWeapon(getRandomWeapon());
+            enemy.lifePoints();
+            System.out.println("--------------------------------------------");
+        }
+    }
+
+    private static String getRandomWeapon() {
+
+        Random r = new Random();
+        int randInt = r.nextInt(weapon.length);
+        return weapon[randInt];
+    }
+
+    private static String getRandomEnemyType() {
+
+        Random r = new Random();
+        int randInt = r.nextInt(enemyType.length);
+        return enemyType[randInt];
+    }
+
+    private static void probarFacade() {
+
+        CreditMarket creditMarket = new CreditMarket();
+        creditMarket.showCreditGold();
+        creditMarket.showCreditSilver();
+        creditMarket.showCreditBlack();
+    }
+
+    private static void probarDecorator() {
 
         Credit gold = new Gold();
 
@@ -110,7 +165,7 @@ public class Main {
 
     }
 
-    private static void probarComposite(){
+    private static void probarComposite() {
 
         CuentaComponent cuentaCorriente = new CuentaCorriente(10.00, "Mauricio Ramírez");
         CuentaComponent cuentaAhorro = new CuentaAhorro(20.00, "Mateo Ramírez");
@@ -123,7 +178,7 @@ public class Main {
         cuentaComposite.getAmount();
     }
 
-    private static void probarBridge(){
+    private static void probarBridge() {
 
         com.company.structural.bridge.CreditCard classic = new ClassicCreditCard(new UnsecureCreditCard());
         classic.realizarPago();
@@ -132,7 +187,7 @@ public class Main {
         classic.realizarPago();
     }
 
-    private static void probarAdapter(){
+    private static void probarAdapter() {
 
         com.company.structural.adapter.CreditCard creditCard = new com.company.structural.adapter.CreditCard();
         creditCard.pay("classic");
@@ -141,7 +196,7 @@ public class Main {
         creditCard.pay("silver");
     }
 
-    private static void probarVisitor(){
+    private static void probarVisitor() {
 
         OfertaElemento ofertaElemento = new OfertaGasolina();
         ofertaElemento.accept(new BlackCreditCardVisitor());
@@ -174,8 +229,8 @@ public class Main {
         Expression cero = new TerminalExpresion("0");
         Expression uno = new TerminalExpresion("1");
 
-        Expression  containBoolean = new orExpression(cero, uno);
-        Expression  containOneAndCero = new andExpression(cero, uno);
+        Expression containBoolean = new orExpression(cero, uno);
+        Expression containOneAndCero = new andExpression(cero, uno);
 
         System.out.println(containBoolean.interpret("cero"));
         System.out.println(containBoolean.interpret("0"));
@@ -218,6 +273,7 @@ public class Main {
         messagePublisher.notifyUpdate(new Semaforo("VERDE_COCHE"));
 
     }
+
     private static void probarMemento() {
 
         Caretaker caretaker = new Caretaker();
@@ -243,7 +299,6 @@ public class Main {
         System.out.println(article.getText());
 
 
-
     }
 
     private static void probarMediator() {
@@ -261,7 +316,7 @@ public class Main {
 
     private static void probarIterator() {
 
-        com.company.behavioral.iterator.Card[] cards =  new com.company.behavioral.iterator.Card[5];
+        com.company.behavioral.iterator.Card[] cards = new com.company.behavioral.iterator.Card[5];
         cards[0] = new com.company.behavioral.iterator.Card("VISA");
         cards[1] = new com.company.behavioral.iterator.Card("AMEX");
         cards[2] = new com.company.behavioral.iterator.Card("MASTER CARD");
@@ -271,7 +326,7 @@ public class Main {
         List lista = new CardList(cards);
         Iterator iterator = lista.iterator();
 
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
 
             com.company.behavioral.iterator.Card tarjeta = (com.company.behavioral.iterator.Card) iterator.next();
             System.out.println(tarjeta.getType());

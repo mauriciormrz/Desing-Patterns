@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6e0c2a-0018-4ae0-854c-658a0214428f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/composite/CuentaAhorro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/composite/CuentaComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/composite/CuentaComposite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/composite/CuentaCorriente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/decorator/Black.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/decorator/Credit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/decorator/CreditDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/decorator/Gold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/decorator/InternationalPaymentDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/structural/decorator/SecureDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/facade/Black.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/facade/Credit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/facade/CreditMarket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/facade/Gold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/facade/Silver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/flyweight/Detective.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/flyweight/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/flyweight/EnemyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/flyweight/Private.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/proxy/AccessToInternet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/proxy/Internet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/structural/proxy/ProxyInternet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatronJava/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
@@ -94,58 +96,77 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="320" y="75" key="#Plugins/0.23.1440.808@0.23.1440.808" timestamp="1586730186416" />
-    <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1586728456713">
+    <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1586815036695">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="533" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1586552488179" />
-    <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1586728456713" />
+    <state x="533" y="143" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1586815036695" />
     <state x="482" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586440792801">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="482" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.808@0.23.1440.808" timestamp="1586440792801" />
+    <state x="483" y="137" key="#xdebugger.evaluate" timestamp="1586791102054">
+      <screen x="0" y="23" width="1440" height="808" />
+    </state>
+    <state x="483" y="137" key="#xdebugger.evaluate/0.23.1440.808@0.23.1440.808" timestamp="1586791102054" />
+    <state x="471" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586784639160">
+      <screen x="0" y="23" width="1440" height="808" />
+    </state>
+    <state x="471" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.808@0.23.1440.808" timestamp="1586784639160" />
     <state width="592" height="466" key="DebuggerActiveHint" timestamp="1586304400963">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="592" height="466" key="DebuggerActiveHint/0.23.1440.808@0.23.1440.808" timestamp="1586304400963" />
-    <state width="1398" height="274" key="GridCell.Tab.0.bottom" timestamp="1586730291354">
+    <state width="1398" height="206" key="GridCell.Tab.0.bottom" timestamp="1586813153665">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586552848648" />
-    <state width="1398" height="274" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586730291354" />
-    <state width="1398" height="274" key="GridCell.Tab.0.center" timestamp="1586730291353">
+    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586813153665" />
+    <state width="1398" height="206" key="GridCell.Tab.0.center" timestamp="1586813153664">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586552848646" />
-    <state width="1398" height="274" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1586730291353" />
-    <state width="1398" height="274" key="GridCell.Tab.0.left" timestamp="1586730291352">
+    <state width="1398" height="206" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1586813153664" />
+    <state width="1398" height="206" key="GridCell.Tab.0.left" timestamp="1586813153663">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586552848645" />
-    <state width="1398" height="274" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1586730291352" />
-    <state width="1398" height="274" key="GridCell.Tab.0.right" timestamp="1586730291354">
+    <state width="1398" height="206" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1586813153663" />
+    <state width="1398" height="206" key="GridCell.Tab.0.right" timestamp="1586813153665">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586552848647" />
-    <state width="1398" height="274" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1586730291354" />
-    <state width="1398" height="258" key="GridCell.Tab.1.bottom" timestamp="1586376768365">
+    <state width="1398" height="206" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1586813153665" />
+    <state width="1398" height="253" key="GridCell.Tab.1.bottom" timestamp="1586812838033">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1398" height="258" key="GridCell.Tab.1.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586376768365" />
-    <state width="1398" height="258" key="GridCell.Tab.1.center" timestamp="1586376768363">
+    <state width="1398" height="253" key="GridCell.Tab.1.bottom/0.23.1440.808@0.23.1440.808" timestamp="1586812838033" />
+    <state width="1398" height="253" key="GridCell.Tab.1.center" timestamp="1586812838033">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1398" height="258" key="GridCell.Tab.1.center/0.23.1440.808@0.23.1440.808" timestamp="1586376768363" />
-    <state width="1398" height="258" key="GridCell.Tab.1.left" timestamp="1586376768363">
+    <state width="1398" height="253" key="GridCell.Tab.1.center/0.23.1440.808@0.23.1440.808" timestamp="1586812838033" />
+    <state width="1398" height="253" key="GridCell.Tab.1.left" timestamp="1586812838032">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1398" height="258" key="GridCell.Tab.1.left/0.23.1440.808@0.23.1440.808" timestamp="1586376768363" />
-    <state width="1398" height="258" key="GridCell.Tab.1.right" timestamp="1586376768364">
+    <state width="1398" height="253" key="GridCell.Tab.1.left/0.23.1440.808@0.23.1440.808" timestamp="1586812838032" />
+    <state width="1398" height="253" key="GridCell.Tab.1.right" timestamp="1586812838033">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state width="1398" height="258" key="GridCell.Tab.1.right/0.23.1440.808@0.23.1440.808" timestamp="1586376768364" />
+    <state width="1398" height="253" key="GridCell.Tab.1.right/0.23.1440.808@0.23.1440.808" timestamp="1586812838033" />
     <state x="400" y="189" width="639" height="476" key="find.popup" timestamp="1586527262488">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="400" y="189" width="639" height="476" key="find.popup/0.23.1440.808@0.23.1440.808" timestamp="1586527262488" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/structural/flyweight/EnemyFactory.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
