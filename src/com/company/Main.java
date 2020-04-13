@@ -43,6 +43,11 @@ import com.company.creational.prototype.PrototypeFactory;
 import com.company.structural.bridge.ClassicCreditCard;
 import com.company.structural.bridge.SecureCreditCard;
 import com.company.structural.bridge.UnsecureCreditCard;
+import com.company.structural.composite.CuentaAhorro;
+import com.company.structural.composite.CuentaComponent;
+import com.company.structural.composite.CuentaComposite;
+import com.company.structural.composite.CuentaCorriente;
+import com.company.structural.decorator.*;
 
 import static com.company.creational.prototype.PrototypeFactory.CarType.AMEX;
 import static com.company.creational.prototype.PrototypeFactory.CarType.VISA;
@@ -74,7 +79,48 @@ public class Main {
 
         //STRUCTURAL
         //probarAdapter();
-        probarBridge();
+        //probarBridge();
+        //probarComposite();
+        probarDecorator();
+
+    }
+
+    private static void probarDecorator(){
+
+        Credit gold = new Gold();
+
+        Credit blackInternationalPayment = new Black();
+        blackInternationalPayment = new InternationalPaymentDecorator(blackInternationalPayment);
+
+        Credit goldSecureInternational = new Gold();
+        goldSecureInternational = new InternationalPaymentDecorator(goldSecureInternational);
+        goldSecureInternational = new SecureDecorator(goldSecureInternational);
+
+        System.out.println("---------Tarjeta Gold con configuración--------------------------");
+        gold.showCredit();
+        System.out.println("");
+
+        System.out.println("---------Tarjeta Black con configuración-------------------------");
+        blackInternationalPayment.showCredit();
+        System.out.println("");
+
+        System.out.println("--------Tarjeta Gold2 con configuración--------------------------");
+        goldSecureInternational.showCredit();
+        System.out.println("");
+
+    }
+
+    private static void probarComposite(){
+
+        CuentaComponent cuentaCorriente = new CuentaCorriente(10.00, "Mauricio Ramírez");
+        CuentaComponent cuentaAhorro = new CuentaAhorro(20.00, "Mateo Ramírez");
+
+        CuentaComposite cuentaComposite = new CuentaComposite();
+        cuentaComposite.addCuenta(cuentaCorriente);
+        cuentaComposite.addCuenta(cuentaAhorro);
+
+        cuentaComposite.showAccountName();
+        cuentaComposite.getAmount();
     }
 
     private static void probarBridge(){
